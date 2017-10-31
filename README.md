@@ -1,3 +1,23 @@
-有一群朋友在玩團康遊戲，每次當一個單字出現時，他們會一個一個輪流說 出該單字的字母。說到最後一個字母的人就算出局，在他出局時，要說出他的編 號以及每一個字母。 
-如果最後一個字母是母音，則下個單字開頭由照著原本方向的隔壁朋友開 始；否則為相反方向的隔壁朋友開始。如果是順時針，字母放入最後一個；逆時 針，字母從前面放入。 遊戲結束條件為只剩一個人(溫拿)的時候，最後溫拿再輸出自己的編號與全 部的字母。 
+Pseudo code: 
+1. Store the sequence of the players and find which player start the game 
+2. While(there is a vocabulary) do
+3.   If(the order is clockwise) then 
+4.    For(i<length of vocabulary): 
+5.     For every player, put backward the letter of vocabulary. 
+6.    Output the player who takes the last letter of vocabulary. 
+7.    If(the last letter of vocabulary is vowel) then 
+8.     Keep the same order of players taking the letter. 
+9.    Else 
+10.     Change the order to counterclockwise.  
+11.   Else  
+12.    For(i<length of vocabulary): 
+13.     For every player, put forward the letter of vocabulary. 
+14.    Output the player who takes the last letter of vocabulary. 
+15.    If(the last letter of vocabulary is vowel) then 
+16.     Keep the same order of players taking the letter. 
+17.    Else 
+18.     Change the order to clockwise. 
+19. Output the last player and letters. 
+ 
+ 
  
